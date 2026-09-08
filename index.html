@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集 | 大學成果展</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 頁首與個人簡介 -->
+    <header>
+        <div class="container">
+            <h1>你的名字 (Your Name)</h1>
+            <p class="subtitle">大學四年專案與學習成果展示</p>
+            <p class="bio">歡迎來到我的個人網站！這裡記錄了我大學期間進行的各類專案、課堂作業與技術探索。</p>
+        </div>
+    </header>
+
+    <!-- 年級篩選按鈕 -->
+    <nav class="filter-nav">
+        <div class="container">
+            <button class="filter-btn active" data-filter="all">全部展示</button>
+            <button class="filter-btn" data-filter="freshman">大一 (基礎學習)</button>
+            <button class="filter-btn" data-filter="sophomore">大二 (進階實作)</button>
+            <button class="filter-btn" data-filter="junior">大三 (核心專案)</button>
+            <button class="filter-btn" data-filter="senior">大四 (畢業專題)</button>
+        </div>
+    </nav>
+
+    <!-- 專案展示區域 -->
+    <main class="container">
+        <section class="projects-grid" id="projects-container">
+            
+            <!-- 卡片範例：大一 -->
+            <article class="project-card" data-category="freshman">
+                <div class="card-content">
+                    <span class="tag">大一</span>
+                    <h3>C++ 基礎主控台遊戲</h3>
+                    <p>利用基礎 C++ 語法與資料結構實作經典的貪食蛇遊戲，強化邏輯思考。</p>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>CLI</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-1" target="_blank" class="btn">查看 GitHub</a>
+                </div>
+            </article>
+
+            <!-- 卡片範例：大二 -->
+            <article class="project-card" data-category="sophomore">
+                <div class="card-content">
+                    <span class="tag">大二</span>
+                    <h3>班級通訊錄管理系統</h3>
+                    <p>結合 Java 與 MySQL 資料庫，打造具有 CRUD 功能的桌面圖形化介面應用程式。</p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Swing</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-2" target="_blank" class="btn">查看 GitHub</a>
+                </div>
+            </article>
+
+            <!-- 卡片範例：大三 -->
+            <article class="project-card" data-category="junior">
+                <div class="card-content">
+                    <span class="tag">大三</span>
+                    <h3>全棧電商網站平台</h3>
+                    <p>使用 React 與 Node.js 開發的全棧網頁應用，支援購物車與第三方支付整合。</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-3" target="_blank" class="btn">查看 GitHub</a>
+                </div>
+            </article>
+
+            <!-- 卡片範例：大四 -->
+            <article class="project-card" data-category="senior">
+                <div class="card-content">
+                    <span class="tag">大四</span>
+                    <h3>畢業專題：AI 影像辨識系統</h3>
+                    <p>運用 Python 與 PyTorch 訓練深度學習模型，針對實體物件進行即時偵測與分類。</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>OpenCV</span>
+                    </div>
+                    <a href="https://github.com/your-username/project-4" target="_blank" class="btn">查看 GitHub</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/your-username" target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引用編譯後的 TypeScript 檔案 -->
+    <script src="dist/main.js"></script>
+</body>
+</html>
