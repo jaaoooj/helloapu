@@ -3,109 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人作品集 | 大學成果展</title>
+    <title>個人作品集 | 大學四年專案成果展</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 頁首與個人簡介 -->
-    <header>
-        <div class="container">
-            <h1>你的名字 (Your Name)</h1>
-            <p class="subtitle">大學四年專案與學習成果展示</p>
-            <p class="bio">歡迎來到我的個人網站！這裡記錄了我大學期間進行的各類專案、課堂作業與技術探索。</p>
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#projects">專案成果</a></li>
+            <li><a href="#skills">專業技能</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首頁 / 個人簡介 -->
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 <span class="highlight">[你的名字]</span></h1>
+            <p>這是我的大學四年專案作品集，記錄了我的成長與技術累積。</p>
+            <a href="#projects" class="btn">瀏覽專案</a>
         </div>
     </header>
 
-    <!-- 年級篩選按鈕 -->
-    <nav class="filter-nav">
-        <div class="container">
-            <button class="filter-btn active" data-filter="all">全部展示</button>
-            <button class="filter-btn" data-filter="freshman">大一 (基礎學習)</button>
-            <button class="filter-btn" data-filter="sophomore">大二 (進階實作)</button>
-            <button class="filter-btn" data-filter="junior">大三 (核心專案)</button>
-            <button class="filter-btn" data-filter="senior">大四 (畢業專題)</button>
+    <!-- 專案展示區 -->
+    <section id="projects" class="section">
+        <h2>大學四年專案成果</h2>
+        
+        <!-- 分類篩選按鈕 -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="freshman">大一/大二</button>
+            <button class="filter-btn" data-filter="senior">大三/大四</button>
+            <button class="filter-btn" data-filter="capstone">畢業專題</button>
         </div>
-    </nav>
 
-    <!-- 專案展示區域 -->
-    <main class="container">
-        <section class="projects-grid" id="projects-container">
+        <!-- 作品卡片列表 -->
+        <div class="projects-grid">
             
-            <!-- 卡片範例：大一 -->
-            <article class="project-card" data-category="freshman">
-                <div class="card-content">
-                    <span class="tag">大一</span>
-                    <h3>C++ 基礎主控台遊戲</h3>
-                    <p>利用基礎 C++ 語法與資料結構實作經典的貪食蛇遊戲，強化邏輯思考。</p>
+            <!-- 專案 1 -->
+            <div class="project-card" data-category="capstone">
+                <div class="project-info">
+                    <span class="tag">畢業專題</span>
+                    <h3>智慧型系統與數據分析平台</h3>
+                    <p>結合核心演算法與現代化介面設計，解決特定領域的實務問題。</p>
                     <div class="tech-stack">
-                        <span>C++</span>
-                        <span>CLI</span>
+                        <span>JavaScript</span>
+                        <span>HTML/CSS</span>
+                        <span>API整合</span>
                     </div>
-                    <a href="https://github.com/your-username/project-1" target="_blank" class="btn">查看 GitHub</a>
+                    <a href="#" class="project-link" target="_blank">查看細節 / GitHub →</a>
                 </div>
-            </article>
+            </div>
 
-            <!-- 卡片範例：大二 -->
-            <article class="project-card" data-category="sophomore">
-                <div class="card-content">
-                    <span class="tag">大二</span>
-                    <h3>班級通訊錄管理系統</h3>
-                    <p>結合 Java 與 MySQL 資料庫，打造具有 CRUD 功能的桌面圖形化介面應用程式。</p>
-                    <div class="tech-stack">
-                        <span>Java</span>
-                        <span>MySQL</span>
-                        <span>Swing</span>
-                    </div>
-                    <a href="https://github.com/your-username/project-2" target="_blank" class="btn">查看 GitHub</a>
-                </div>
-            </article>
-
-            <!-- 卡片範例：大三 -->
-            <article class="project-card" data-category="junior">
-                <div class="card-content">
-                    <span class="tag">大三</span>
-                    <h3>全棧電商網站平台</h3>
-                    <p>使用 React 與 Node.js 開發的全棧網頁應用，支援購物車與第三方支付整合。</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="https://github.com/your-username/project-3" target="_blank" class="btn">查看 GitHub</a>
-                </div>
-            </article>
-
-            <!-- 卡片範例：大四 -->
-            <article class="project-card" data-category="senior">
-                <div class="card-content">
-                    <span class="tag">大四</span>
-                    <h3>畢業專題：AI 影像辨識系統</h3>
-                    <p>運用 Python 與 PyTorch 訓練深度學習模型，針對實體物件進行即時偵測與分類。</p>
+            <!-- 專案 2 -->
+            <div class="project-card" data-category="senior">
+                <div class="project-info">
+                    <span class="tag">大三專案</span>
+                    <h3>實驗數據分析與可視化工具</h3>
+                    <p>針對特定實驗與計算流程進行自動化處理與圖表呈現。</p>
                     <div class="tech-stack">
                         <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>OpenCV</span>
+                        <span>Data Analysis</span>
+                        <span>Web</span>
                     </div>
-                    <a href="https://github.com/your-username/project-4" target="_blank" class="btn">查看 GitHub</a>
+                    <a href="#" class="project-link" target="_blank">查看細節 / GitHub →</a>
                 </div>
-            </article>
+            </div>
 
-        </section>
-    </main>
+            <!-- 專案 3 -->
+            <div class="project-card" data-category="freshman">
+                <div class="project-info">
+                    <span class="tag">基礎實作</span>
+                    <h3>基礎程式語言與演算實作</h3>
+                    <p>大一、大二期間修習基礎課程時所完成的專案與演算法實作。</p>
+                    <div class="tech-stack">
+                        <span>C/C++</span>
+                        <span>算法設計</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">查看細節 / GitHub →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 專業技能區 -->
+    <section id="skills" class="section bg-light">
+        <h2>專業技能</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>前端 / 網頁開發</h3>
+                <p>HTML5, CSS3, JavaScript (ES6+), Responsive Design</p>
+            </div>
+            <div class="skill-category">
+                <h3>程式語言 & 工具</h3>
+                <p>Git / GitHub, Python, C/C++</p>
+            </div>
+            <div class="skill-category">
+                <h3>軟實力與專業領域</h3>
+                <p>問題解決、團隊合作、實驗數據分析、專案管理</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡方式區 -->
+    <section id="contact" class="section">
+        <h2>聯絡我</h2>
+        <p>歡迎透過以下方式與我聯繫！</p>
+        <div class="contact-links">
+            <a href="mailto:your-email@example.com" class="btn-outline">Email 聯繫</a>
+            <a href="https://github.com/your-username" target="_blank" class="btn-outline">GitHub</a>
+        </div>
+    </section>
 
     <!-- 頁尾 -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Your Name. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/your-username" target="_blank">GitHub</a> |
-                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-            </div>
-        </div>
+        <p>© 2026 [你的名字]. All Rights Reserved.</p>
     </footer>
 
-    <!-- 引用編譯後的 TypeScript 檔案 -->
-    <script src="dist/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
