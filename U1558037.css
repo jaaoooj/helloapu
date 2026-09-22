@@ -1,0 +1,158 @@
+/* ==========================================
+   1. 全域樣式與頁面基礎設定
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 頁首標題 */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   2. 圖片畫廊佈局 (響應式網格)
+   ========================================== */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 超連結與卡片容器 */
+.img-card {
+    display: block;
+    text-decoration: none;
+    background-color: #1e293b;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 滑鼠移過整張卡片時外框變亮 */
+.img-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.25);
+}
+
+/* 圖片裁切容器 */
+.img-wrapper {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background-color: #0f172a;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 卡片下方說明文字 */
+.caption {
+    padding: 16px;
+    text-align: center;
+}
+
+.caption h3 {
+    color: #f1f5f9;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.caption p {
+    color: #38bdf8;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   3. 五種不同的 CSS 滑鼠移過（Hover）動態效果
+   ========================================== */
+
+/* 圖片 1：放大 + 旋轉 */
+.card-1 img {
+    transition: transform 0.4s ease;
+}
+.card-1:hover img {
+    transform: scale(1.18) rotate(4deg);
+}
+
+/* 圖片 2：整張卡片向上浮動 */
+.card-2 {
+    transition: transform 0.3s ease;
+}
+.card-2:hover {
+    transform: translateY(-12px);
+}
+
+/* 圖片 3：左右搖擺動畫 (使用 @keyframes) */
+@keyframes shakeAnimation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+.card-3:hover img {
+    animation: shakeAnimation 0.5s ease-in-out infinite alternate;
+}
+
+/* 圖片 4：心跳脈動動畫 (使用 @keyframes) */
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+.card-4:hover img {
+    animation: pulseAnimation 0.7s ease-in-out infinite;
+}
+
+/* 圖片 5：3D 視角傾斜 */
+.card-5 .img-wrapper {
+    perspective: 800px;
+}
+.card-5 img {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.card-5:hover img {
+    transform: scale(1.1) rotateX(12deg) rotateY(-12deg);
+}
+
+/* 頁尾 */
+.footer {
+    margin-top: 50px;
+    color: #64748b;
+    font-size: 0.85rem;
+}
